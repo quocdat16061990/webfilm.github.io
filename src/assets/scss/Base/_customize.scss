@@ -1,0 +1,74 @@
+.myCarousel, .homeMovies {
+    .carousel-indicators{
+        bottom: 12%;
+        li{
+            background-color: #d8d8d8;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            color: transparent;
+            opacity: 1;
+        }
+        .active{
+            background-color: $color-orange-0;
+        }
+    }
+    .carousel-control-prev, .carousel-control-next{
+        width: 5%;
+        height: 10%;
+        top: 45%;
+        cursor: default;
+        opacity: 1;
+        transform: translateX(-3%);
+        // @include mediaQueryMax("medium"){
+        //     transform: translateX(20px);
+        // }
+    }
+    .carousel-control-prev-icon{
+        background-image: url("https://123phim.vn/app/assets/img/icons/back-session.png");
+    }
+    .carousel-control-next-icon{
+        background-image: url("https://123phim.vn/app/assets/img/icons/next-session.png");
+    }
+    .carousel-control-prev-icon, .carousel-control-next-icon{
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        z-index: 10;
+    }
+}
+.homeMovies{
+    .carousel-control-prev{
+        transform: translateX(-70px);
+    }
+    .carousel-control-next{
+        transform: translateX(70px);
+    }
+}
+
+#dashboard-table{
+    a:hover{
+        color: #fb4226;
+    }
+    a:focus{
+        outline: none;
+    }
+}
+.modal-backdrop{
+    position: relative!important;
+}
+@include mediaQueryMax("large"){
+    .myCarousel, .homeMovies {
+        .carousel-control-prev, .carousel-control-next{
+            width: 12%;
+        }
+    }
+}
+@include mediaQueryMax("medium"){
+    .homeMovies{
+        .carousel-control-prev, .carousel-control-next{
+            transform: translateX(0);
+        }
+    }
+}
+

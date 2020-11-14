@@ -1,0 +1,117 @@
+.admin-pannel {
+  color: $color-white-1;
+  font-size: $fs-2;
+  height: 65px;
+  .sidebar-toggle {
+    width: 43px;
+    height: 40px;
+    line-height: 39px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      background: $color-white-0;
+      color: #224abe;
+    }
+  }
+  .dropdown-menu {
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    .dropdown-item {
+      cursor: pointer;
+      i {
+        color: #d1d3e2;
+      }
+      &:hover {
+        background-color: #e3eaef;
+      }
+    }
+  }
+}
+.admin-detail {
+  // background-color: $color-white-1;
+  h5 {
+    font-weight: $fw-bold-0;
+    font-size: 24px;
+    margin-bottom: $spacing-3;
+  }
+  .management {
+    .nav-item {
+      max-height: 40px;
+      .nav-link {
+        color: $color-black-0;
+        padding-left: $spacing-4 !important;
+        font-size: $fs-2;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+          font-size: $fs-2 + 2;
+          background-color: #eeeeee;
+          font-weight: $fw-bold-0;
+        }
+      }
+      .nav-link:hover,
+      .nav-link:focus,
+      p:hover,
+      p:focus {
+        outline: none;
+      }
+    }
+    .active {
+      font-size: $fs-2 + 2 !important;
+      background-color: #eeeeee;
+      font-weight: $fw-bold-0;
+    }
+    #user-detail {
+      box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+      p {
+        margin-bottom: $spacing-0;
+        margin: $spacing-0 $spacing-3;
+        padding-left: 25px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: $border-radius;
+        cursor: pointer;
+        &:hover,
+        &.user-type-active {
+          font-size: $fs-2;
+          background-color: #eaecf4;
+          font-weight: $fw-bold-0;
+        }
+      }
+    }
+  }
+  .dash-board {
+    .table {
+      th,
+      td {
+        vertical-align: middle;
+      }
+    }
+    #dashboard-table {
+      td:last-child {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .movie-sub-menu {
+      position: absolute;
+      top: 5px;
+      left: 35%;
+      background: $color-white-1;
+      width: 400px;
+      color: $color-black-0;
+      z-index: 100;
+      p {
+        margin-bottom: $spacing-0;
+        span {
+          color: $color-orange-0;
+        }
+      }
+    }
+  }
+  button {
+    border-radius: $border-radius;
+  }
+}
+
+//background-color: rgba(238, 238, 238, 0.88);

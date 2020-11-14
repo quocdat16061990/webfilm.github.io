@@ -1,0 +1,501 @@
+.myInforDetailMain {
+  margin-top: 50px;
+  .detailMainTop {
+    position: relative;
+    .styleBlur {
+      position: relative;
+      overflow: hidden;
+      img {
+        filter: blur(15px);
+        margin: -11px 0 -$spacing-0 -$spacing-1;
+        max-height: 530px;
+        width: 100%;
+      }
+    }
+    .styleGradient {
+      background: rgba(0, 0, 0, 0)
+        linear-gradient(to top, rgb(255, 255, 255), transparent 100%) repeat
+        scroll 0% 0%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .detailMainInfo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      .posterMain {
+        // background-image: url("https://s3img.vcdn.vn/mobile/123phim/2019/10/phap-su-mu-ai-chet-gio-tay-blind-shaman-c18-15725111042745_215x318.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        // background-size: cover;
+        background-position: center, 0 0;
+        border-radius: $border-radius;
+        width: 100%;
+        height: 350px;
+        transition: all .2s;
+        cursor: pointer;
+        .playTrailerPoster{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          opacity: 0;
+        }
+        &:hover{
+          .playTrailerPoster{
+            opacity: 1;
+          }
+        }
+      }
+      .infoMain {
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translateY(-50%);
+        .parentInfo2 {
+          font-size: $fs-3 + 4;
+          span:first-child {
+            margin-right: $spacing-0 + 1;
+            background-color: $color-orange-0;
+            color: $color-white-0;
+            font-size: $fs-2;
+            border-radius: $border-radius;
+            padding: 2px 7px;
+            display: inline-block;
+            text-align: center;
+            min-width: 33px;
+          }
+        }
+        .buyTicket {
+          @include button(
+            $color-orange-0,
+            $color-white-0,
+            16px,
+            7px,
+            25px,
+            0,
+            4px
+          );
+          margin-top: $spacing-4;
+          margin-bottom: $spacing-3;
+          transition: all .2s;
+          &:hover {
+            background-color: #b42a14;
+          }
+        }
+      }
+      .circleStar {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        #starMain {
+          img {
+            width: 25px;
+          }
+        }
+      }
+    }
+  }
+  .contentMain {
+    transform: translate(0, -100px);
+    .contentMain-title {
+      @include nav-item();
+    }
+    .tab-content {
+      // LICH CHIEU
+      #showingSession {
+        .listPCinemas {
+          min-height: 705px;
+          border: 1px solid $color-white-1;
+          border-top-left-radius: $border-radius;
+          border-bottom-left-radius: $border-radius;
+          .nav-item {
+            .nav-link {
+              padding: $spacing-3 7px;
+              transition: all 0.2s;
+              opacity: 0.5;
+              display: flex;
+              align-items: center;
+              height: 100%;
+              img {
+                margin-right: $spacing-1;
+                width: 50px;
+                height: 50px;
+              }
+              span {
+                font-size: $fs-2;
+                color: $color-black-0;
+                font-weight: $fw-bold-0;
+              }
+            }
+            &:after {
+              content: "";
+              width: 90%;
+              margin: 0 auto;
+              height: 1px;
+              display: block;
+              background-color: rgba(238, 238, 238, 0.88);
+            }
+          }
+        }
+        .nav-item {
+          &:hover {
+            .nav-link {
+              opacity: 1;
+            }
+          }
+          .nav-link.active {
+            opacity: 1;
+          }
+        }
+        .listDayOfWeek {
+          border: 1px solid $color-white-1;
+          border-top-right-radius: $border-radius;
+          border-bottom-right-radius: $border-radius;
+          color: $color-white-0;
+          background-color: $color-white-0;
+          .DayOfWeek {
+            height: 90px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            .wrapDayOfWeek {
+              text-align: center;
+              width: 200%;
+              border-bottom: 0;
+              .nav-item {
+                width: calc(100% / 14);
+                cursor: pointer;
+                .nav-link {
+                  color: $color-black-0;
+                  outline: none;
+                  border: 0;
+                  p {
+                    margin-bottom: 0;
+                  }
+                  p:last-child {
+                    font-size: $fs-2 + 2;
+                  }
+                }
+                .nav-link.active {
+                  color: $color-orange-0;
+                  p:last-child {
+                    font-size: $fs-3;
+                  }
+                }
+              }
+            }
+          }
+          .listSession {
+            height: 621px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            .wrapMovie {
+              padding: $spacing-3 $spacing-3 $spacing-1 $spacing-3;
+              .movieInfo {
+                padding-bottom: $spacing-3;
+                cursor: pointer;
+                img {
+                  width: 50px;
+                  height: 60px;
+                }
+                .wrapInfo {
+                  height: 50px;
+                  overflow: hidden;
+                  padding-left: $spacing-1;
+                  .headInfo {
+                    font-size: $fs-2;
+                    padding-top: 4px;
+                    color: $color-black-0;
+                    span:first-child {
+                      color: $color-green-0;
+                    }
+                  }
+                  .movieAddInfo {
+                    font-size: 13px;
+                    color: $color-gray-1;
+                    line-height: 1.7;
+                    span:last-child {
+                      font-size: $fs-0;
+                      margin-left: $spacing-0;
+                      color: $color-orange-0;
+                    }
+                  }
+                }
+              }
+              .listTypeTime {
+                padding-left: $spacing-1;
+                img {
+                  width: 30px;
+                  height: 40px;
+                  margin-right: $spacing-3;
+                }
+                .sessions {
+                  width: 70px;
+                  text-align: center;
+                  .sessions__time {
+                    font-size: $fs-3;
+                    font-weight: 400;
+                    color: $color-green-1;
+                    margin: 0 3px 25px 0;
+                    transition: all 0.2s;
+                    text-decoration: none;
+                    cursor: pointer;
+                    &:hover {
+                      color: $color-orange-0;
+                    }
+                  }
+                }
+              }
+            }
+            .nav-item:after {
+              content: "";
+              width: calc(100% - 40px);
+              margin: auto;
+              height: 1px;
+              display: block;
+              background-color: rgba(238, 238, 238, 0.88);
+            }
+          }
+        }
+      }
+      // THONG TIN
+      #showingInfo {
+        .detailMainStyle {
+          .rowLeftInfo {
+            .contentTitle {
+              width: 35%;
+              font-weight: $fw-bold-0;
+            }
+            .contentInfo {
+              width: 40%;
+              color: $color-gray-2;
+            }
+          }
+        }
+      }
+      // DANH GIA
+      #showingReviewer {
+        .dadInputReviewer {
+          width: 650px;
+          margin: auto;
+          position: relative;
+          cursor: pointer;
+          .imgReviewer {
+            position: absolute;
+            top: 20%;
+            left: 3%;
+            width: 36px;
+            height: 36px;
+            border-radius: 25px;
+          }
+          .inputReviwer {
+            padding: $spacing-1 $spacing-1 $spacing-1 75px;
+            cursor: pointer;
+            width: 100%;
+            height: 60px;
+            border-radius: $border-radius;
+            border: 1px solid #e8e8e9;
+            background: $color-white-0;
+            color: $color-gray-1;
+          }
+          .imgReviewerStar {
+            position: absolute;
+            top: 30%;
+            right: 3%;
+          }
+        }
+        .listComment{
+          width: 650px;
+          margin: auto;
+          .commnentItem{
+            border: 1px solid #e8e8e9;
+            border-radius: $border-radius;
+            .infoReviewer{
+              span{
+                font-size: 17px;
+                font-weight: $fw-bold-0;
+              }
+            }
+            .numberRateStar{
+              color: $color-orange-0;
+              font-size: $fs-2;
+            }
+          }
+        }
+      }
+    }
+  }
+  // // MODAL
+  // #overlay-age-restrict {
+  //   .modal-dialog {
+  //     height: 100%;
+  //     .modal-content {
+  //       position: absolute;
+  //       top: 50%;
+  //       left: 50%;
+  //       transform: translate(-50%, -50%);
+  //       width: 70%;
+  //       border-radius: 15px;
+  //       letter-spacing: -0.2px;
+  //       .modal-body {
+  //         font-size: $fs-2;
+  //         .modal-title {
+  //           font-weight: $fw-bold-0;
+  //           span {
+  //             padding: 4px 8px;
+  //             background-color: $color-orange-0;
+  //             border-radius: $border-radius;
+  //             color: $color-white-0;
+  //             font-size: $fs-0;
+  //             font-weight: 400;
+  //           }
+  //         }
+  //       }
+  //       .modal-footer {
+  //         border-top: 1px solid #979797;
+  //         font-size: 17px;
+  //         .btn-close,
+  //         .btn-go {
+  //           text-align: center;
+  //           padding: 15px 25px;
+  //           cursor: pointer;
+  //         }
+  //         .btn-close {
+  //           color: $color-gray-1;
+  //           border-right: 1px solid #979797;
+  //         }
+  //         .btn-go {
+  //           font-weight: $fw-bold-0;
+  //           color: #006dff;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  #reviewerModal{
+    .modal-content{
+      .close:focus{
+        outline: none;
+      }
+      .reviewerStar{
+        p{
+          font-size: $fs-3 + 4;
+          color: $color-green-1;
+        }
+        .rate {
+          float: left;
+          margin-left: 32%;
+          height: 46px;
+          padding: 0 10px;
+        }
+        .rate:not(:checked) > input {
+          position: absolute;
+          top: -9999px;
+        }
+        .rate:not(:checked) > label {
+          float: right;
+          width: 1em;
+          overflow: hidden;
+          white-space: nowrap;
+          cursor: pointer;
+          font-size: 30px;
+          color: #ccc;
+        }
+        .rate:not(:checked) > label:before {
+          content: "★ ";
+        }
+        .rate > input:checked ~ label {
+          color: $color-orange-0;
+        }
+        .rate:not(:checked) > label:hover,
+        .rate:not(:checked) > label:hover ~ label {
+          color: $color-orange-1;
+        }
+        .rate > input:checked + label:hover,
+        .rate > input:checked + label:hover ~ label,
+        .rate > input:checked ~ label:hover,
+        .rate > input:checked ~ label:hover ~ label,
+        .rate > label:hover ~ input:checked ~ label {
+          color: $color-orange-1;
+        }
+      }
+      .form-group{
+        textarea:focus{
+          box-shadow: none;
+          border: 1px solid $color-orange-0;
+        }
+        button{
+          background-color: $color-orange-0;
+          color: $color-white-0;
+          margin-left: 84%;
+          &:focus{
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mediaQueryMax("medium"){
+  .myInforDetailMain{
+    .detailMainTop{
+      .detailMainInfo{
+        .posterMain, .buyTicket, .circleStar {
+          display: none;
+        }
+        .infoMain{
+          top: 80%;
+          left: 0;
+          transform: none;
+          color: $color-white-0;
+        }
+      }
+      .styleGradient{
+        display: none;
+      }
+      .styleBlur{
+        img{
+          filter: none!important;
+          max-height: 400px;
+          margin: 0;
+        }
+      }
+    }
+    .contentMain{
+      .contentMain-title{
+        .nav-item{
+          .nav-link{
+            color: $color-white-0;
+          }
+        }
+      }
+    }
+  }
+}
+@include mediaQueryMax("small"){
+  .myInforDetailMain {
+    .contentMain {
+      .tab-content{
+        #showingSession {
+          .listPCinemas{
+            min-height: 540px;
+            border: 0;
+            .nav-item:after{
+              width: 45%;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+

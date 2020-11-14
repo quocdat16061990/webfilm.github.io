@@ -1,0 +1,77 @@
+@mixin text-style($color-text, $fs, $fw) {
+  color: $color-text;
+  font-size: $fs;
+  font-weight: $fw;
+}
+@mixin button(
+  $bg-color,
+  $color-text,
+  $fs,
+  $paTB,
+  $paLR,
+  $border,
+  $border-radius
+) {
+  background-color: $bg-color;
+  padding: $paTB $paLR;
+  color: $color-text;
+  text-align: center;
+  border: $border;
+  border-radius: $border-radius;
+  transition: all 0.2s;
+}
+
+
+@mixin nav-item {
+	.nav-item{
+		.nav-link{
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			border: 0;
+			color: $color-black-0;
+			font-size: $fs-3;
+			line-height: 24px;
+			height: 24px;
+			transition: all .2s;
+			&:hover{
+				font-size: 24px;
+			}
+		}
+		.nav-link.active{
+			color: $color-orange-1;
+			outline: none;
+      font-size: 24px;
+      background: transparent;
+		}
+	}
+}
+@mixin line-clamp($number-line){
+	display: -webkit-box;
+    -webkit-line-clamp: $number-line;
+	-webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+@mixin mediaQueryMax($screen) {
+  @if(map-has-key($map: $breakpoints, $key: $screen)){
+    $value: map-get($map: $breakpoints, $key: $screen);
+    @media screen and (max-width:$value){
+      @content;
+    }
+  }
+  @else{
+    @warn "`#{$screen} khong ton tai`";
+  }
+}
+@mixin mediaQueryMin($screen) {
+  @if(map-has-key($map: $breakpoints, $key: $screen)){
+    $value: map-get($map: $breakpoints, $key: $screen);
+    @media screen and (min-width:$value){
+      @content;
+    }
+  }
+  @else{
+    @warn "`#{$screen} khong ton tai`";
+  }
+}

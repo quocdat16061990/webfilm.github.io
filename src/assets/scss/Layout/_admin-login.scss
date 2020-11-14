@@ -1,0 +1,25 @@
+.admin-login {
+  color: #000;
+  .input-group {
+    position: relative;
+    border: 1px solid #ced4da;
+    border-radius: $border-radius;
+    padding: 6px 12px;
+    margin-top: $spacing-1;
+    i {
+      position: absolute;
+      top: 25%;
+      color: $color-gray-0;
+    }
+    input {
+      border: 0;
+      width: 100%;
+      padding-left: $spacing-4;
+      &:focus {
+        outline: none;
+      }
+    }
+
+  }
+
+}

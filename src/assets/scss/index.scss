@@ -1,0 +1,24 @@
+@import './Helper/_variables.scss';
+@import './Helper/_mixin.scss';
+
+@import './Base/_reset.scss';
+
+@import './Component/_button.scss';
+@import './Component/_search.scss';
+@import './Component/_checked.scss';
+
+@import './Layout/_header.scss';
+@import "./Layout/_carousel.scss";
+@import "./Layout/_home-movies.scss";
+@import "./Layout/_home-Cinema.scss";
+@import "./Layout/_home-news.scss";
+@import "./Layout/_homeApp-movies.scss";
+@import "./Layout/_footer.scss";
+
+@import "./Layout/_inforMovie.scss";
+@import "./Layout/_modal-login.scss";
+@import "./Layout/_checkout.scss";
+@import "./Layout/_admin-dashboard.scss";
+@import "./Layout/_admin-login.scss";
+@import "./Layout/_page-not-found.scss";
+@import './Base/_customize.scss';

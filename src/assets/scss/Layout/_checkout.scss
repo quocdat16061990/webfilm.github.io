@@ -1,0 +1,342 @@
+.checkout{
+	margin-top: 50px;
+	.seatcheckout{
+		padding-top: 30px;
+		.seat-topContent{
+			width: 90%;
+			margin: 0 auto;
+			.seat-leftTitle{
+				.logocinema{
+					width: 75px;
+					margin-right: 13px;
+				}
+				.contentcinema{
+					.address{
+						margin-top: 1px;
+						font-size: $fs-2;
+						font-weight: $fw-bold-0;
+						span:first-child{
+							color: $color-orange-1;
+						}
+					}
+					.hour{
+						color: $color-gray-1;
+					}
+				}
+			}
+			.seat-rightTitle{
+				margin-right: 0 auto;
+				width: 75px;
+				text-align: center;
+				p:first-child{
+					font-size: $fs-0;
+					color: $color-gray-1;
+				}
+				p:last-child{
+					font-size: 29px;
+					color: $color-orange-0;
+				}
+			}
+		}
+		.seatmap{
+			.listseat{
+				.rowseat{
+					font-size: $fs-2;
+					.rowname{
+						margin-right: 40px;
+						font-size: $fs-3 + 4;
+						font-weight: $fw-bold-0;
+					}
+					.seat-wrapper{
+						margin-right: $spacing-1;
+						padding: $spacing-1;
+						// width: 30px;
+						// height: 30px;
+						cursor: pointer;
+						border-radius: $border-radius;
+						border: 1px solid $color-orange-0;
+					}
+				}
+			}
+			.noteseat{
+				color: $color-gray-1;
+				margin-top: 50px;
+				margin-bottom: 20px;
+				.typeseats{
+					margin-right: $spacing-4;
+					.typeseats__color{
+						display: inline-block;
+						width: 12px;
+						height: 12px;
+						border-radius: 2px;
+						margin-right: $spacing-0;
+						.notChoose{
+							width: 10px;
+							height: 10px;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+						}
+						// span{
+						// 	position: absolute;
+						// 	top: 0;
+						// 	left: 0;
+						// }
+					}
+
+				}
+			}
+		}
+	}
+	.bookingcheckout{
+		position: relative;
+		box-shadow: 0 0 15px rgba(0,0,0,.3);
+
+		.bookingcheckout__content{
+			overflow-x: hidden;
+			overflow-y: auto;
+			width: 98%;
+			margin-left: auto;
+			height: 86%;
+				.totalcost{
+				font-size: 36px;
+				color: #44c020;
+				padding-bottom: $spacing-2;
+			}
+			.film-info{
+				padding-bottom: $spacing-2;
+				.film-name{
+					span:first-child{
+						background-color:$color-orange-0;
+						color:$color-white-0;
+						border-radius: $border-radius;
+						padding: 3px 7px;
+					}
+					span:last-child{
+						font-weight: $fw-bold-0;
+					}
+				}
+				.cinema-address{
+					span:first-child{
+						color: $color-orange-1;
+					}
+				}
+			}
+			.combo{
+				cursor: pointer;
+				img{
+					border-radius: $border-radius;
+					width: 25px;
+				}
+				.totalCombo{
+					color: #44c020;
+				}
+			}
+			.methodpay{
+				.paymentParent{
+					position: relative;
+					display: block;
+					cursor: pointer;
+					input{
+						position: absolute;
+  						opacity: 0;
+  						height: 0;
+						  width: 0;
+						  &:checked ~ .checkmark::after{
+							  display: block;
+						  }
+					}
+					.checkmark{
+						position: absolute;
+  						top: 0;
+  						left: 0;
+  						height: 22px;
+						width: 22px;
+						background-color: $color-white-1;
+						border-radius: 50%;
+						border: 1px solid $color-orange-0;
+					}
+					.checkmark::after{
+						content: "";
+						position: absolute;
+						top: 5px;
+						left: 5px;
+						width: 10px;
+						height: 10px;
+						border-radius: 50%;
+						background-color: $color-orange-0;
+						display: none;
+					}
+					img{
+						border-radius: $border-radius;
+						margin-left: 35px;
+						margin-right: $spacing-2;
+						width: 25px;
+					}
+				}
+			}
+			.totalcost, .film-info, .chair, .info-user, .combo, .methodpay{
+				border-bottom: 1px dashed $color-white-2;
+			}
+		}
+		.buyticket{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			padding: $spacing-2;
+			text-align: center;
+			font-size: $fs-3 + 4;
+			color: $color-white-0;
+			background-color: $color-gray-1;
+			width: 100%;
+			transition: all .2s;
+			&:hover{
+				background-color: $color-orange-0;
+			}
+			&:focus{
+				box-shadow: none;;
+			}
+		}
+	}
+	.combo-detail{
+		position: absolute;
+		top: 60px;
+		right: 25%;
+		background-color: $color-white-0;
+		height: 77%;
+		width: 90%;
+		margin: 0 auto;
+		transition: all .2s;
+		overflow: hidden;
+		z-index: 10;
+		i{
+			width: 30px;
+			margin-left: 93%;
+			cursor: pointer;
+		}
+		.combo-info{
+			img{
+				border-radius: $border-radius;
+				width: 50px;
+				height: 50px;
+			}
+			.combo-price{
+				p:last-child{
+					color: $color-orange-0;
+				}
+			}
+			button{
+				background-color: $color-white-1;
+				padding: 0 8px;
+				&:focus{
+					box-shadow: none;
+				}
+			}
+		}
+	}
+	// MODAL
+	#checkoutModalInfoTicket, #checkoutModalNotification, #checkoutModalTimerout{
+		.modal-content{
+			position: relative;
+			.modal-header{
+				p{
+					font-size: $fs-3 + 4;
+					font-weight: $fw-bold-0;
+				}
+			}
+			.modal-body{
+				.info-item{
+					margin-bottom: $spacing-0;
+					span:first-child{
+						width: 120px;
+						display: inline-block;
+					}
+				}
+			}
+			.close{
+				position: absolute;
+				bottom: -25px;
+				right: 26px;
+				padding: $spacing-1 $spacing-3;
+				background-color: $color-orange-0;
+				opacity: 1;
+				color: $color-white-0;
+				border-radius: $border-radius;
+				font-size: $fs-1;
+				cursor: pointer;
+				&:focus{
+					outline: none;
+				}
+			}
+		}
+	}
+	.modal.show{
+		display: flex!important;
+		align-items: center;
+	}
+	#checkoutModalNotification, #checkoutModalTimerout{
+		.modal-content{
+			font-size: $fs-3;
+			min-height: 100px;
+			.close{
+				bottom: 10px;
+				right: 30px;
+			}
+
+		}
+	}
+}
+@include mediaQueryMax("large"){
+	.checkout{
+		.seatcheckout{
+			.seatmap{
+				.noteseat{
+					.typeseats{
+						margin-right: $spacing-0 + 3;
+					}
+				}
+			}
+
+		}
+	}
+}
+@include mediaQueryMax("medium"){
+	.checkout{
+		.seatcheckout{
+			margin: auto;
+		}
+		.combo-detail{
+			top: 610px;
+			right: 0;
+			width: 100%;
+			height: 70%;
+		}
+	}
+}
+@include mediaQueryMax("small"){
+	.checkout{
+		.seatcheckout{
+			.seatmap{
+				.listseat{
+					.rowseat{
+						.rowname{
+							margin-right: 20px;
+						}
+						.seat-wrapper{
+							margin-right: $spacing-0;
+							padding: $spacing-0;
+						}
+					}
+				}
+				.noteseat{
+					.typeseats{
+						.typeseats__name{
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}

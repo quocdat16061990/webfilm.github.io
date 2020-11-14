@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header, section, footer, aside, nav, main, article, figure {
+    display: block;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: $color-white-0;
+    @include text-style($color-black-0, $fs-1, $fw-normal);
+    font-size: $fs-1!important;
+	line-height: $line-height-0!important;
+}
+.clear{
+    clear: both;
+}
+.myContainer{
+    // max-width: 940px;
+    width: 70%;
+    margin: auto;
+    @include mediaQueryMax("large"){
+        width: 90%;
+    }
+    @include mediaQueryMax("medium"){
+        width: 100%;
+    }
+}
+.removeOutline{
+    outline: none;
+}
+.pointer{
+    cursor: pointer;
+}
+.paganate-text{
+    color: #000;
+}
+.paganate-active{
+    color: #fb4226!important;
+}
+.w-150{
+    width: 150%;
+}

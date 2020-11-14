@@ -1,0 +1,44 @@
+.checked{
+  position: relative;
+  .login__checkbox{
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 5;
+    height: 20px;
+    width: 20px;
+    &:checked + .login__checkmark::after{
+      display: block;
+    }
+    &:checked ~ .login__checkmark{
+      background-color: $color-orange-0;
+    }
+  }
+  .login__checkmark{
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #ccc;
+  }
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .login__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 8px;
+    top: 2px;
+    width: 6px;
+    height: 13px;
+    border: solid white;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  label{
+    cursor: pointer;
+      padding-left: 30px;
+  }
+}

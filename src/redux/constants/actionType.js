@@ -1,0 +1,12 @@
+export const GET_LIST_MOVIES = "GET_LIST_MOVIES";
+export const GET_INFOR_MOVIES = "GET_INFOR_MOVIES";
+export const GET_INFOR_ListPCinemas = "GET_INFOR_ListPCinemas";
+export const GET_INFOR_ListCinemas = "GET_INFOR_ListCinemas";
+export const GET_INFOR_ListMoviesCinemas = "GET_INFOR_ListMoviesCinemas";
+export const GET_LIST_SHOW_MOVIES = "GET_LIST_SHOW_MOVIES";
+export const GET_NEWS = "GET_NEWS";
+export const GET_NEWS_THUMBNAIL = "GET_NEWS_THUMBNAIL";
+export const GET_LIST_USERS = "GET_LIST_USERS";
+export const POST_USER_CLIENT = "POST_USER_CLIENT";
+export const GET_LIST_ROOM_TICKET = "GET_LIST_ROOM_TICKET";
+export const POST_BOOK_TICKET = "POST_BOOK_TICKET"
